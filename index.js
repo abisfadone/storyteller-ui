@@ -1,1 +1,1 @@
-module.exports = () => ("Hello From UI lib!");
+module.exports.hello = () => ("Hello From UI lib!");
