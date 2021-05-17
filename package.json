@@ -1,8 +1,10 @@
 {
   "name": "storyteller-ui",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Miramixi Storyteller UI",
-  "main": "dist",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": ["dist"],
   "author": "Olfa Melles",
   "license": "MIT",
   "scripts": {
