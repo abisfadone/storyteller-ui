@@ -2,7 +2,20 @@
   "name": "storyteller-ui",
   "version": "1.0.0",
   "description": "Miramixi Storyteller UI",
-  "main": "index.js",
+  "main": "dist",
   "author": "Olfa Melles",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --out-dir dist --copy-files"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13"
+  }
 }
