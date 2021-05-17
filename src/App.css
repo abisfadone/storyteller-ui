@@ -13,7 +13,8 @@
   --accent: rgba(247, 192, 110, 0.75);
   --accent2: #EA9144;
   --accent3: #db6b26;
-  --shadow: #ebe9e5; }
+  --shadow: #ebe9e5;
+}
 
 *,
 *::after,
@@ -21,7 +22,8 @@
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   box-sizing: border-box;
@@ -30,21 +32,26 @@ html {
   width: 100%;
   color: #312F2C;
   background: #FFFCF8;
-  font-family: 'Helvetica'; }
+  font-family: 'Helvetica';
+}
 
 h4 {
   font-size: 0.8rem;
   font-weight: lighter;
   text-transform: uppercase;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+}
 
 button {
   background: none;
   border: none;
   padding: none;
-  cursor: pointer; }
-  button:focus {
-    outline: none; }
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
 
 .badge {
   display: inline-flex;
@@ -58,9 +65,12 @@ button {
   height: 1.5rem;
   min-width: 1.5rem;
   line-height: 100%;
-  cursor: pointer; }
-  .badge--none {
-    background-color: #C7BEB6; }
+  cursor: pointer;
+}
+
+.badge--none {
+  background-color: #C7BEB6;
+}
 
 .btn {
   height: 3rem;
@@ -72,36 +82,53 @@ button {
   cursor: pointer;
   background-color: #F2EADF;
   position: relative;
-  transition: all 0.35s; }
-  .btn:hover {
-    background-color: rgba(247, 192, 110, 0.75); }
-  .btn:active {
-    background-color: #F2EADF; }
-  .btn:disabled {
-    cursor: not-allowed; }
-    .btn:disabled:hover {
-      background-color: inherit; }
+  transition: all 0.35s;
+}
+
+.btn:hover {
+  background-color: rgba(247, 192, 110, 0.75);
+}
+
+.btn:active {
+  background-color: #F2EADF;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  background-color: inherit;
+}
 
 .btn--primary {
-  background-color: #EFDDC8; }
+  background-color: #EFDDC8;
+}
 
 .btn--outline {
-  border: 3px solid #EFDDC8; }
+  border: 3px solid #EFDDC8;
+}
 
 .btn--ghost {
   color: #C7BEB6;
-  background-color: #F2EADF; }
+  background-color: #F2EADF;
+}
 
 .btn--inline {
-  background-color: inherit; }
+  background-color: inherit;
+}
 
 .btn--warning {
   color: #973618;
-  background-color: #eb8c6f; }
-  .btn--warning:hover {
-    background-color: #eb8c6f; }
+  background-color: #eb8c6f;
+}
+
+.btn--warning:hover {
+  background-color: #eb8c6f;
+}
 
 .CTA {
   min-width: 6rem;
   padding: 0 0.5rem;
-  border: 3px solid transparent; }
+  border: 3px solid transparent;
+}

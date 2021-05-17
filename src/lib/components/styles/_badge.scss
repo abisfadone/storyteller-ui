@@ -9,9 +9,10 @@
   color: $off-white;
   height: 1.5rem;
   min-width: 1.5rem;
-  line-height: 100%; // center text 
+  line-height: 100%;
   cursor: pointer;
-    &--none {
-      background-color: $body-lightest;
-    } 
+
+  &--none {
+    background-color: $body-lightest;
+  }
 }
