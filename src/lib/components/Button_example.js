@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = (props) => (
+const Button_example = (props) => (
   <button className={`btn btn__${props.kind}`}
     data-id={props.id}
     type={props.type}

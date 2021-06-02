@@ -1,7 +1,8 @@
-import Button from './lib/components/Button';
+import React from 'react';
+import Button from './lib/components/Button/Button';
 import Badge from './lib/components/Badge';
 
-import './App.css';
+import './lib/components/styles/_button.scss';
 
 const App = () => (
   <div>
@@ -10,7 +11,14 @@ const App = () => (
     <Badge value={3} />
     <br />
     <h5>A button:</h5>
-    <Button label="Enter" kind="primary" />
+    <Button
+      type="secondary"
+      value="Button"
+      size="large"
+      disabled={false}
+      active={true}
+      isLoading={true}
+    />
   </div>
 );
 

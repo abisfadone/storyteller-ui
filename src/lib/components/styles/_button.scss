@@ -1,61 +1,226 @@
-%btn {
-  height: 3rem;
-  min-width: 3rem;
-  border-radius: $border-small;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: $sand2;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.btn__container{
   position: relative;
-  transition: all $short-fade;
+  .btn{
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.75px;
+    z-index: 1;
+    text-align: center;
+    position: absolute;
+    &__large{
+      width: 200px;
+      height: 65px;
+      font-size: 16px;
+      margin: 6px 0 0 5px;
+    }
+    &__medium{
+      width: 200px;
+      height: 55px;
+      font-size: 16px;
+      margin: 6px 0 0 5px;
+    }
+    &__small{
+      width: 120px;
+      height: 40px;
+      font-size: 14px;
+      margin: 4px 0 0 5px;
+    }
+    &__primary{
+      background-color: #5F2EEA;
+      border: none;
+      color: #F7F7FC;
 
-  &:hover {
-    background-color: $accent;
+      &:hover{
+        background-color: #2A00A2;
+        cursor: pointer;
+      }
+      &:focus{
+        background-color: #5E3AE5;
+      }
+      &:focus.btn__large ~ .btn__bcg__focus{
+        background-color: #E8E1FD;
+        width: 210px;
+        height: 76px;
+        border-radius: 40px;
+      }
+      &:focus.btn__medium ~ .btn__bcg__focus{
+        background-color: #E8E1FD;
+        width: 210px;
+        height: 66px;
+        border-radius: 40px;
+      }
+      &:focus.btn__small ~ .btn__bcg__focus{
+        background-color: #E8E1FD;
+        width: 130px;
+        height: 48px;
+        border-radius: 40px;
+      }
+      &:disabled{
+        background-color: #AC98EF;
+        cursor: not-allowed;
+      }
+    }
+
+    &__secondary{
+      background-color: #FCFCFC;
+      border: 2px solid #5F2EEA;
+      color: #5F2EEA;
+      &:hover{
+        border: 2px solid #2A00A2;
+        cursor: pointer;
+        color: #2A00A2;
+        background-color: #FCFCFC;
+      }
+      &:focus{
+        border: 2px solid #5F2EEA;
+        color: #5E3AE5;
+      }
+      &:focus.btn__large ~ .btn__bcg__focus{
+        background-color: #E8E1FD;
+        width: 210px;
+        height: 76px;
+        border-radius: 40px;
+      }
+      &:focus.btn__medium ~ .btn__bcg__focus{
+        background-color: #E8E1FD;
+        width: 210px;
+        height: 66px;
+        border-radius: 40px;
+      }
+      &:focus.btn__small ~ .btn__bcg__focus{
+        background-color: #E8E1FD;
+        width: 130px;
+        height: 48px;
+        border-radius: 40px;
+      }
+      &:disabled{
+        border: 2px solid #AC98EF;
+        color: #AC98EF;
+        cursor: not-allowed;
+      }
+    }
+
+    &__subtle{
+      background-color: #FCFCFC;
+      border: 2px solid #D9DBE9;
+      color: #5F2EEA;
+      &:hover{
+        border: 2px solid #D9DBE9;
+        cursor: pointer;
+        color: #2A00A2;
+        background-color: #FCFCFC;
+      }
+        &:focus{
+        border: 2px solid #D9DBE9;
+        color: #5E3AE5;
+      }
+      &:focus.btn__large ~ .btn__bcg__focus{
+        background-color: #F1F2F7;
+        width: 210px;
+        height: 76px;
+        border-radius: 40px;
+      }
+      &:focus.btn__medium ~ .btn__bcg__focus{
+        background-color: #F1F2F7;
+        width: 210px;
+        height: 66px;
+        border-radius: 40px;
+      }
+      &:focus.btn__small ~ .btn__bcg__focus{
+        background-color: #F1F2F7;
+        width: 130px;
+        height: 48px;
+        border-radius: 40px;
+      }
+      &:disabled{
+        border: 2px solid #D9DBE9;
+        color: #AC98EF;
+        cursor: not-allowed;
+      }
+    }
+
+    &__text{
+      background:none;
+      border: none;
+      color: #5F2EEA;
+      &:hover{
+        border: none;
+        cursor: pointer;
+        color: #2A00A2;
+      }
+      &:focus{
+        border: none;
+        color: #5E3AE5;
+      }
+      &:hover.btn__large ~ .btn__bcg__focus{
+        background-color: #EFF0F6;
+        width: 210px;
+        height: 76px;
+        border-radius: 40px;
+      }
+      &:hover.btn__medium ~ .btn__bcg__focus{
+        background-color: #EFF0F6;
+        width: 210px;
+        height: 66px;
+        border-radius: 40px;
+      }
+      &:hover.btn__small ~ .btn__bcg__focus{
+        background-color: #EFF0F6;
+        width: 130px;
+        height: 48px;
+        border-radius: 40px;
+      }
+      &:disabled{
+        border: none;
+        color: #AC98EF;
+        cursor: not-allowed;
+      }
+    }
+
   }
 
-  &:active,
-  &__active {
-    background-color: $sand2;
+  .btn__bcg__focus{
+    position: absolute;
+  }
+  .loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
   }
 
-  &:disabled {
-    cursor: not-allowed;
+  .secondary.loading::after, subtle.loading::after{
+    border-top-color: #5F2EEA;
+  }
+  .text.loading::after{
+   animation: none;
+    content: 'Loading...';
+    color: #5F2EEA;
+    border:none;
+    position: relative;
+  }
 
-    &:hover {
-      background-color: inherit;
+  @keyframes button-loading-spinner {
+    from {
+      transform: rotate(0turn);
+    }
+
+    to {
+      transform: rotate(1turn);
     }
   }
+
 }
 
-//general additional styles for all buttons
-.btn {
-  @extend %btn;
-
-  &__primary {
-    background-color: $sand3;
-  }
-
-  &__outline {
-    border: 3px solid $sand3;
-  }
-
-  &__ghost {
-    color: $body-lightest;
-    background-color: $sand2;
-  }
-
-  &__inline {
-    background-color: inherit;
-  }
-
-  &__warning {
-    color: $error;
-    background-color: $error-light;
-
-    &:hover {
-      background-color: $error-light;
-    }
-  }
-}
 
