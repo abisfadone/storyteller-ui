@@ -1,0 +1,90 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "amd": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "no-use-before-define": "off",
+    "spaced-comment": "off",
+    "react/prop-types": 0,
+    "react/jsx-uses-vars": [2],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": ["*"],
+        "next": ["return", "const", "let", "block", "block-like", "cjs-export", "class", "export", "import"]
+      },
+      {
+        "blankLine": "always",
+        "prev": ["const", "let", "block", "block-like", "cjs-export", "class", "export", "import"],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "export", "import"],
+        "next": ["const", "let", "export", "import"]
+      }
+    ],
+    "linebreak-style": 0,
+    "global-require": 0,
+    "import/no-unresolved": 0,
+    "comma-dangle": ["error", "never"],
+    "import/extensions": 0,
+    "class-methods-use-this": 0,
+    "max-len": [
+      "error", 120, 2, {
+        "ignoreUrls": true,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "lines-between-class-members": 0,
+    "no-underscore-dangle": 0,
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-restricted-syntax": "off",
+    "consistent-return": "off",
+    "prefer-object-spread": "off",
+    "react/no-find-dom-node": "off",
+    "no-useless-escape": "off",
+    "no-continue": "off",
+    "guard-for-in": "off",
+    "no-case-declarations": "off",
+    "no-param-reassign": "off",
+    "no-await-in-loop": "off",
+    "no-console": "off",
+    "no-new": "off",
+    "no-shadow": "off",
+    "import/export": "off",
+    "react/display-name": "off",
+    "camelcase": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "import/no-dynamic-require": "off"
+  }
+}
