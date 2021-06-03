@@ -13,6 +13,8 @@ import Tab from './components/tab/Tab';
 import Pagination from './components/Pagination';
 import AvatarWithName from './components/AvatarWithName';
 import Avatar from './components/Avatar';
+import Card from './components/Card';
+import CardBlur from './components/CardBlur';
 
 export {
   Badge,
@@ -29,5 +31,7 @@ export {
   Tab,
   Pagination,
   AvatarWithName,
-  Avatar
+  Avatar,
+  Card,
+  CardBlur
 };
