@@ -1,24 +1,21 @@
 import React from 'react';
 import Button from './lib/components/Button/Button';
-import Badge from './lib/components/Badge';
+// import Checkbox from './lib/components/Checkbox/Checkbox';
 
 import './lib/components/styles/_button.scss';
+import './lib/components/styles/_checkbox.scss';
 
 const App = () => (
   <div>
     <p>Miramixi Storyteller</p>
-    <h5>A notification badge:</h5>
-    <Badge value={3} />
-    <br />
     <h5>A button:</h5>
     <Button
-      type="secondary"
-      value="Button"
-      size="large"
-      disabled={false}
-      active={true}
-      isLoading={true}
+      type='primary'
+      size='large'
+      value={'Button'}
+      isLoading={false}
     />
+
   </div>
 );
 

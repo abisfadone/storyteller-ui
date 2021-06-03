@@ -1,61 +1,61 @@
-%btn {
-  height: 3rem;
-  min-width: 3rem;
-  border-radius: $border-small;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: $sand2;
-  position: relative;
-  transition: all $short-fade;
-
-  &:hover {
-    background-color: $accent;
-  }
-
-  &:active,
-  &__active {
-    background-color: $sand2;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-
-    &:hover {
-      background-color: inherit;
-    }
-  }
-}
-
-//general additional styles for all buttons
-.btn {
-  @extend %btn;
-
-  &__primary {
-    background-color: $sand3;
-  }
-
-  &__outline {
-    border: 3px solid $sand3;
-  }
-
-  &__ghost {
-    color: $body-lightest;
-    background-color: $sand2;
-  }
-
-  &__inline {
-    background-color: inherit;
-  }
-
-  &__warning {
-    color: $error;
-    background-color: $error-light;
-
-    &:hover {
-      background-color: $error-light;
-    }
-  }
-}
-
+//%btn {
+//  height: 3rem;
+//  min-width: 3rem;
+//  border-radius: $border-small;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  cursor: pointer;
+//  background-color: $sand2;
+//  position: relative;
+//  transition: all $short-fade;
+//
+//  &:hover {
+//    background-color: $accent;
+//  }
+//
+//  &:active,
+//  &__active {
+//    background-color: $sand2;
+//  }
+//
+//  &:disabled {
+//    cursor: not-allowed;
+//
+//    &:hover {
+//      background-color: inherit;
+//    }
+//  }
+//}
+//
+////general additional styles for all buttons
+//.btn {
+//  @extend %btn;
+//
+//  &__primary {
+//    background-color: $sand3;
+//  }
+//
+//  &__outline {
+//    border: 3px solid $sand3;
+//  }
+//
+//  &__ghost {
+//    color: $body-lightest;
+//    background-color: $sand2;
+//  }
+//
+//  &__inline {
+//    background-color: inherit;
+//  }
+//
+//  &__warning {
+//    color: $error;
+//    background-color: $error-light;
+//
+//    &:hover {
+//      background-color: $error-light;
+//    }
+//  }
+//}
+//

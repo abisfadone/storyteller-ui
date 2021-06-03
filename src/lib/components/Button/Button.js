@@ -4,7 +4,9 @@ const Button = (props) => (
   <div className='btn__container'>
     <button
       className={`btn btn__${props.type} btn__${props.size}`}
+      name={props.name}
       disabled={props.disabled}
+      onClick={props.handleClick}
     >
       {props.isLoading ? <span className={`${props.type} loading`}></span> : <span>{props.value}</span>}
     </button>
