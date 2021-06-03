@@ -1,0 +1,50 @@
+.progress-role-bar {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.progress-role-bar__svg {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  transform: rotate(-90deg);
+  circle {
+    position: absolute;
+    fill: none;
+    stroke-width: 12;
+    transform: translate(10px, 10px);
+    stroke-dasharray: 440;
+    stroke-linecap: round;
+  }
+
+  circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #EFF0F7;
+  }
+
+  circle:nth-child(2) {
+    stroke: $violet;
+  }
+}
+
+.progress-role-bar__info {
+  position: relative;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #6E7191;
+}
+
+.progress-role-bar__value {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  color: #4E4B66;
+}
