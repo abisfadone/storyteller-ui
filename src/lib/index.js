@@ -15,6 +15,8 @@ import AvatarWithName from './components/AvatarWithName';
 import Avatar from './components/Avatar';
 import Card from './components/Card';
 import CardBlur from './components/CardBlur';
+import Color from './components/Color';
+import Grayscale from './components/Grayscale';
 
 export {
   Badge,
@@ -33,5 +35,7 @@ export {
   AvatarWithName,
   Avatar,
   Card,
-  CardBlur
+  CardBlur,
+  Color,
+  Grayscale
 };
