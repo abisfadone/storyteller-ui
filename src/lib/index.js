@@ -11,6 +11,8 @@ import Stats from './components/Stats';
 import Tabs from './components/tab/Tabs';
 import Tab from './components/tab/Tab';
 import Pagination from './components/Pagination';
+import AvatarWithName from './components/AvatarWithName';
+import Avatar from './components/Avatar';
 
 export {
   Badge,
@@ -25,5 +27,7 @@ export {
   Stats,
   Tabs,
   Tab,
-  Pagination
+  Pagination,
+  AvatarWithName,
+  Avatar
 };
