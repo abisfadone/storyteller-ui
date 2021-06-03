@@ -1,0 +1,26 @@
+.tag {
+  border-radius: 39px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.75px;
+  padding: 8px 16px;
+  img {
+    margin-right: 9px;
+  }
+  &-success {
+    background: #F2FFFB;
+    color: #00966D;
+  }
+  &-primary {
+    background: #E4DAFF;
+    color: #2A00A2;
+  }
+  &-secondary {
+    background: #F1FCFF;
+    color: #0096B7;
+  }
+}
