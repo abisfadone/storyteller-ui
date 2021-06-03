@@ -2,9 +2,11 @@
   position: fixed;
   right: 0;
   bottom: 0;
+
   .success {
     background: #00BA88;
   }
+
   .error {
     background: #ED2E7E;
   }
@@ -13,6 +15,7 @@
 .notification__success {
   background: #00BA88;
 }
+
 .notification__error {
   background: #ED2E7E;
 }
@@ -32,6 +35,7 @@
   line-height: 32px;
   letter-spacing: 0.75px;
   color: #FCFCFC;
+
   &:not(:last-child) {
     margin-bottom: 15px;
   }
@@ -47,6 +51,7 @@
   background: transparent;
   border: none;
   outline: none;
+
   &:before, &:after {
     content: '';
     display: inline-block;
@@ -58,9 +63,11 @@
     top: calc(50% - 1px);
     left: 0;
   }
+
   &:before {
     transform: rotate(45deg);
   }
+
   &:after {
     transform: rotate(-45deg);
   }
@@ -69,13 +76,16 @@
 .notifications__animation-enter {
   opacity: 0;
 }
+
 .notifications__animation-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
+
 .notifications__animation-exit {
   opacity: 1;
 }
+
 .notifications__animation-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-in;

@@ -4,8 +4,7 @@ import likeDark from '../../assets/icon/like-dark.svg';
 
 const Stats = (props) => (
   <div className={`stats stats-${props.type}`}>
-    {props.type === 'light' && <img src={likeLight} alt=""/>}
-    {props.type === 'dark' && <img src={likeDark} alt=""/>}
+    <img src={props.type === 'light' ? likeLight : likeDark} alt={props.alt} />
     {props.amount}
   </div>
 );

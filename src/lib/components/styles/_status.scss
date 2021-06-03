@@ -6,6 +6,7 @@
   line-height: 18px;
   letter-spacing: 1px;
   color: #4E4B66;
+
   &:before {
     content: '';
     display: inline-block;
@@ -14,16 +15,19 @@
     border-radius: 50%;
     margin-right: 11px;
   }
+
   &-success {
     &:before {
       background: #00BA88;
     }
   }
+
   &-error {
     &:before {
       background: #ED2E7E;
     }
   }
+
   &-warn {
     &:before {
       background: #F4B740;
