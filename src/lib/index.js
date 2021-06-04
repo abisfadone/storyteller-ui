@@ -17,6 +17,7 @@ import Card from './components/Card';
 import CardBlur from './components/CardBlur';
 import Color from './components/Color';
 import Grayscale from './components/Grayscale';
+import Table from './components/Table';
 
 export {
   Badge,
@@ -37,5 +38,6 @@ export {
   Card,
   CardBlur,
   Color,
-  Grayscale
+  Grayscale,
+  Table
 };
