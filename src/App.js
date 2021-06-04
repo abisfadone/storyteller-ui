@@ -39,8 +39,7 @@ const App = () => (
 
     <IconButton
       type='secondary'
-      isLoading={true}
-    >
+         >
       <RightArrow color='secondary'/>
     </IconButton>
 
