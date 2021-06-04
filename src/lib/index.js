@@ -2,6 +2,7 @@ import Badge from './components/Badge';
 import Button from './components/Button';
 import Comment from './components/Comment';
 import ProgressInteraction from './components/ProgressInteraction';
+import ProgressInteractionRadius from './components/ProgressInteractionRadius';
 import Toast from './components/Toast';
 import Tooltips from './components/Tooltips';
 import Modal from './components/Modal';
@@ -26,6 +27,7 @@ export {
   Button,
   Comment,
   ProgressInteraction,
+  ProgressInteractionRadius,
   Toast,
   Tooltips,
   Modal,

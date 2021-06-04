@@ -1,7 +1,8 @@
 import React from 'react';
+import clsx from 'clsx';
 
 const AvatarWithName = (props) => (
-  <div className={`avatar-with-name avatar-with-name-${props.namePositoin}`}>
+  <div className={clsx('avatar-with-name', `avatar-with-name-${props.namePositoin}`)}>
     {props.avatar ? (
       <img className="avatar-img" src={props.avatar} alt={props.alt}/>
     ) : (

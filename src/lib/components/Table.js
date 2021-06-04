@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 import pen from '../../assets/icon/pen.svg';
 import trash from '../../assets/icon/trash.svg';
 
@@ -11,14 +12,17 @@ const Table = (props) => {
       <tr>
         {props.keyArray.map((key, index) => (
           <th key={index}>
-            <div className={`
-            ${key.type ? key.type : 'default'} 
-            ${index === 0 ? 'first' : ''} 
-            ${props.keyArray.length - 1 === index ? 'last' : ''}
-            `}>{key.value}</div>
+            <div className={clsx(
+              key.type || 'default',
+              index === 0 && 'first',
+              props.keyArray.length - 1 === index && !props.action && 'last'
+            )
+            }>{key.value}</div>
           </th>
         ))}
-        {props.action && <th className='table__action'>Actions</th>}
+        {props.action && <th className='table__action'>
+          <div className="last">Actions</div>
+        </th>}
       </tr>
       </thead>
       <tbody>
@@ -30,7 +34,7 @@ const Table = (props) => {
               ${elem === 'pending' ? 'pending ' : ''}
               ${elem === 'failed' ? 'failed ' : ''}
            `}>
-              <div className={elem.type ? elem.type : 'default'}>
+              <div className={clsx(elem.type || 'default')}>
                 {elem.value}
                 {elem.value === true ? 'true' : ''}
                 {elem.value === false ? 'false' : ''}
@@ -39,16 +43,18 @@ const Table = (props) => {
           ))}
           {props.action && (
             <td className='table__action'>
-              <img
-                onClick={() => props.editHandler(row[0])}
-                src={pen}
-                alt="edit"
-              />
-              <img
-                onClick={() => props.deleteHandler(row[0])}
-                src={trash}
-                alt="setting"
-              />
+              <div>
+                <img
+                  onClick={() => props.editHandler(row[0])}
+                  src={pen}
+                  alt="edit"
+                />
+                <img
+                  onClick={() => props.deleteHandler(row[0])}
+                  src={trash}
+                  alt="setting"
+                />
+              </div>
             </td>
           )}
         </tr>
