@@ -8,9 +8,10 @@ const Checkbox = (props) => (
         checked={props.checked}
         type="checkbox"
         id={`checkbox__${props.id}`}/>
-      <label htmlFor={`checkbox__${props.id}`}></label>
+      <label htmlFor={`checkbox__${props.id}`}>{props.label}</label>
     </div>
     <div className='checkbox__focus'></div>
-  </div>);
+  </div>
+);
 
 export default Checkbox;

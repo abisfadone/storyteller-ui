@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Button = (props) => (
-  <div className='btn__container'>
+  <div className={`btn__${props.size} btn__container`}>
     <button
       className={`btn btn__${props.type} btn__${props.size}`}
       name={props.name}

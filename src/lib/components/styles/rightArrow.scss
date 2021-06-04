@@ -1,0 +1,14 @@
+.right__arrow__container{
+  margin-top: 5px;
+  .right__arrow__primary{
+    stroke: white;
+  }
+  .right__arrow__secondary{
+    stroke: #5F2EEA;
+    &:hover{
+      stroke: #2A00A2;
+    }
+  }
+}
+
+
