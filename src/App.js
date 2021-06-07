@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './App.scss';
 import {
@@ -14,7 +14,8 @@ import {
   CardBlur,
   Color,
   Grayscale,
-  Toggle
+  Toggle,
+  Slider
 } from './lib';
 import avatar from './assets/img/avatar.png';
 
@@ -65,181 +66,195 @@ const TableProps = {
   ]
 };
 
-const App = () => (
-  <div>
-    <Toggle
-      type="checkbox"
-    />
+const App = () => {
+  const [value, setValue] = useState(0);
 
-    <Comment text={'hello'}/>
+  const changeHandler = (e) => {
+    setValue(e.target.value);
+  };
 
-    <ProgressInteraction value={29} valueSymbol={'%'} text={'Done'}/>
-    <ProgressInteractionRadius value={29} valueSymbol={'%'} text={'Done'}/>
+  return (
+    <div>
+      <Slider
+        type="range"
+        value={value}
+        changeHandler={changeHandler}
+      />
 
-    <Toast text={'Error (Full screen width)'} type={'error'} name={'Illia'}/>
-    <Toast text={'Error (Full screen width)'} type={'success'} name={'Illia'}/>
-    <Toast text={'Error (Full screen width)'} type={'default'} name={'Illia'}/>
+      <Toggle
+        type="checkbox"
+      />
 
-    <Tooltips type={'my'}
-              text={'Here is some helpful explainer text to assist the user in understanding how a certain feature works.'}/>
-    <Tooltips type={'other'}
-              text={'Here is some helpful explainer text to assist the user in understanding how a certain feature works.'}/>
+      <Comment text={'hello'}/>
 
-    <Status type={'success'} text={'All systems go.'}/>
-    <Status type={'error'} text={'All systems go.'}/>
-    <Status type={'warn'} text={'All systems go.'}/>
+      <ProgressInteraction value={29} valueSymbol={'%'} text={'Done'}/>
+      <ProgressInteractionRadius value={29} valueSymbol={'%'} text={'Done'}/>
 
-    <Tag text={'Tag One'} type={'success'}/>
-    <Tag text={'Tag One'} type={'primary'}/>
-    <Tag text={'Tag One'} type={'secondary'}/>
+      <Toast text={'Error (Full screen width)'} type={'error'} name={'Illia'}/>
+      <Toast text={'Error (Full screen width)'} type={'success'} name={'Illia'}/>
+      <Toast text={'Error (Full screen width)'} type={'default'} name={'Illia'}/>
 
-    <Stats type={'light'} amount={'223'}/>
-    <Stats type={'dark'} amount={'223'}/>
+      <Tooltips type={'my'}
+                text={'Here is some helpful explainer text to assist the user in understanding how a certain feature works.'}/>
+      <Tooltips type={'other'}
+                text={'Here is some helpful explainer text to assist the user in understanding how a certain feature works.'}/>
 
-    <Tabs>
-      <Tab text={'hello'}/>
-      <Tab text={'hello'}/>
-      <Tab text={'hello'}/>
-      <Tab text={'hello'}/>
-    </Tabs>
+      <Status type={'success'} text={'All systems go.'}/>
+      <Status type={'error'} text={'All systems go.'}/>
+      <Status type={'warn'} text={'All systems go.'}/>
 
-    <Pagination itemsArray={[1, 2, 3, 4]} activeElem={2}/>
+      <Tag text={'Tag One'} type={'success'}/>
+      <Tag text={'Tag One'} type={'primary'}/>
+      <Tag text={'Tag One'} type={'secondary'}/>
 
-    <AvatarWithName avatar={avatar} name={'Illia'} lastName={'Pruskii'} namePositoin={'right'}/>
-    <AvatarWithName avatar={avatar} name={'Illia'} lastName={'Pruskii'} namePositoin={'bottom'}/>
-    <AvatarWithName name={'Illia'} lastName={'Pruskii'} namePositoin={'right'}/>
-    <AvatarWithName name={'Illia'} lastName={'Pruskii'} namePositoin={'bottom'}/>
+      <Stats type={'light'} amount={'223'}/>
+      <Stats type={'dark'} amount={'223'}/>
 
-    <Avatar online avatar={avatar}/>
-    <Avatar online name={'Illia'} lastName={'Pruskii'}/>
+      <Tabs>
+        <Tab text={'hello'}/>
+        <Tab text={'hello'}/>
+        <Tab text={'hello'}/>
+        <Tab text={'hello'}/>
+      </Tabs>
 
-    <Card radius={'large'} shadow={'soft'}>
-      <h1>hello world</h1>
-      <h1>hello world</h1>
-      <h1>hello world</h1>
-    </Card>
-    <Card radius={'normal'} shadow={'large'}>
-      <h1>hello world</h1>
-      <h1>hello world</h1>
-      <h1>hello world</h1>
-    </Card>
-    <Card radius={'small'} shadow={'large'}>
-      <h1>hello world</h1>
-      <h1>hello world</h1>
-      <h1>hello world</h1>
-    </Card>
+      <Pagination itemsArray={[1, 2, 3, 4]} activeElem={2}/>
 
-    <CardBlur blur={'light'}>
-      <h1>hello world</h1>
-      <h1>hello world</h1>
-      <h1>hello world</h1>
-    </CardBlur>
-    <CardBlur blur={'dark'}>
-      <h1>hello world</h1>
-      <h1>hello world</h1>
-      <h1>hello world</h1>
-    </CardBlur>
+      <AvatarWithName avatar={avatar} name={'Illia'} lastName={'Pruskii'} namePositoin={'right'}/>
+      <AvatarWithName avatar={avatar} name={'Illia'} lastName={'Pruskii'} namePositoin={'bottom'}/>
+      <AvatarWithName name={'Illia'} lastName={'Pruskii'} namePositoin={'right'}/>
+      <AvatarWithName name={'Illia'} lastName={'Pruskii'} namePositoin={'bottom'}/>
 
-    <Color
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'primary'}
-    />
-    <Color
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'secondary'}
-    />
-    <Color
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'error'}
-    />
-    <Color
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'success'}
-    />
-    <Color
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'warning'}
-    />
-    <Color
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'gradient-primary'}
-    />
-    <Color
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'gradient-secondary'}
-    />
-    <Color
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'gradient-accent'}
-    />
+      <Avatar online avatar={avatar}/>
+      <Avatar online name={'Illia'} lastName={'Pruskii'}/>
 
-    <Grayscale
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'title-active'}
-    />
-    <Grayscale
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'body'}
-    />
-    <Grayscale
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'label'}
-    />
-    <Grayscale
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'placeholder'}
-    />
-    <Grayscale
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'line'}
-    />
-    <Grayscale
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'input-background'}
-    />
-    <Grayscale
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'background'}
-    />
-    <Grayscale
-      title={'Primary'}
-      text={'Used as the primary color.'}
-      type={'off-white'}
-    />
+      <Card radius={'large'} shadow={'soft'}>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+      </Card>
+      <Card radius={'normal'} shadow={'large'}>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+      </Card>
+      <Card radius={'small'} shadow={'large'}>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+      </Card>
 
-    <Table {...TableProps} action/>
+      <CardBlur blur={'light'}>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+      </CardBlur>
+      <CardBlur blur={'dark'}>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+      </CardBlur>
 
-    <Title type={'large'}>hello world</Title>
-    <Title type={'large-bold'}>hello world</Title>
-    <Title type={'medium'}>hello world</Title>
-    <Title type={'medium-bold'}>hello world</Title>
-    <Title type={'small'}>hello world</Title>
-    <Title type={'small-bold'}>hello world</Title>
+      <Color
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'primary'}
+      />
+      <Color
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'secondary'}
+      />
+      <Color
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'error'}
+      />
+      <Color
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'success'}
+      />
+      <Color
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'warning'}
+      />
+      <Color
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'gradient-primary'}
+      />
+      <Color
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'gradient-secondary'}
+      />
+      <Color
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'gradient-accent'}
+      />
 
-    <Text type={'large'}>hello world</Text>
-    <Text type={'large-link'}>hello world</Text>
-    <Text type={'medium'}>hello world</Text>
-    <Text type={'medium-link'}>hello world</Text>
-    <Text type={'small'}>hello world</Text>
-    <Text type={'small-link'}>hello world</Text>
-    <Text type={'x-small'}>hello world</Text>
-    <Text type={'x-small-link'}>hello world</Text>
-  </div>
-);
+      <Grayscale
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'title-active'}
+      />
+      <Grayscale
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'body'}
+      />
+      <Grayscale
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'label'}
+      />
+      <Grayscale
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'placeholder'}
+      />
+      <Grayscale
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'line'}
+      />
+      <Grayscale
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'input-background'}
+      />
+      <Grayscale
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'background'}
+      />
+      <Grayscale
+        title={'Primary'}
+        text={'Used as the primary color.'}
+        type={'off-white'}
+      />
+
+      <Table {...TableProps} action/>
+
+      <Title type={'large'}>hello world</Title>
+      <Title type={'large-bold'}>hello world</Title>
+      <Title type={'medium'}>hello world</Title>
+      <Title type={'medium-bold'}>hello world</Title>
+      <Title type={'small'}>hello world</Title>
+      <Title type={'small-bold'}>hello world</Title>
+
+      <Text type={'large'}>hello world</Text>
+      <Text type={'large-link'}>hello world</Text>
+      <Text type={'medium'}>hello world</Text>
+      <Text type={'medium-link'}>hello world</Text>
+      <Text type={'small'}>hello world</Text>
+      <Text type={'small-link'}>hello world</Text>
+      <Text type={'x-small'}>hello world</Text>
+      <Text type={'x-small-link'}>hello world</Text>
+    </div>
+  );
+};
 
 export default App;

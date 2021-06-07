@@ -22,6 +22,7 @@ import Table from './components/Table';
 import Title from './components/Title';
 import Text from './components/Text';
 import Toggle from './components/Toggle';
+import Slider from './components/Slider';
 
 export {
   Badge,
@@ -47,5 +48,6 @@ export {
   Table,
   Title,
   Text,
-  Toggle
+  Toggle,
+  Slider
 };
