@@ -13,7 +13,8 @@ import {
   Card,
   CardBlur,
   Color,
-  Grayscale
+  Grayscale,
+  Toggle
 } from './lib';
 import avatar from './assets/img/avatar.png';
 
@@ -66,6 +67,10 @@ const TableProps = {
 
 const App = () => (
   <div>
+    <Toggle
+      type="checkbox"
+    />
+
     <Comment text={'hello'}/>
 
     <ProgressInteraction value={29} valueSymbol={'%'} text={'Done'}/>

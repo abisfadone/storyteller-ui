@@ -21,6 +21,7 @@ import Grayscale from './components/Grayscale';
 import Table from './components/Table';
 import Title from './components/Title';
 import Text from './components/Text';
+import Toggle from './components/Toggle';
 
 export {
   Badge,
@@ -45,5 +46,6 @@ export {
   Grayscale,
   Table,
   Title,
-  Text
+  Text,
+  Toggle
 };
