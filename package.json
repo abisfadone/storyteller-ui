@@ -1,6 +1,6 @@
 {
   "name": "storyteller-ui",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Miramixi Storyteller UI",
   "main": "dist/index.js",
   "module": "dist/index.js",
