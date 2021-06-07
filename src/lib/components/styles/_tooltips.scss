@@ -20,12 +20,12 @@
     clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
     top: -17px;
   }
-  &__other {
+  &-other {
     &:before {
       left: 14px;
     }
   }
-  &__my {
+  &-my {
     &:before {
       right: 14px;
     }

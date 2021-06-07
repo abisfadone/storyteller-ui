@@ -1,0 +1,42 @@
+.card {
+  position: relative;
+  background: #FCFCFC;
+}
+
+.card-radius {
+  &-large {
+    border-radius: 32px;
+  }
+
+  &-normal {
+    border-radius: 16px;
+  }
+
+  &-small {
+    border-radius: 8px;
+  }
+}
+
+.card-shadow {
+  &-soft {
+    filter: drop-shadow(0px 8px 16px rgba(17, 17, 17, 0.04));
+  }
+
+  &-large {
+    filter: drop-shadow(0px 32px 64px rgba(17, 17, 17, 0.08));
+  }
+}
+
+.card-blur {
+  position: relative;
+
+  &-light {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(7px);
+  }
+
+  &-dark {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(7px);
+  }
+}
