@@ -1,7 +1,8 @@
 import React from 'react';
+import clsx from 'clsx';
 
 const Tooltips = (props) => (
-  <div className={`tooltips ${props.type}`}>
+  <div className={clsx('tooltips', `tooltips-${props.type}`)}>
     {props.text}
   </div>
 );

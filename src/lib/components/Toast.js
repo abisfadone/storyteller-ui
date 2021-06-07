@@ -1,7 +1,8 @@
 import React from 'react';
+import clsx from 'clsx';
 
 const Toast = (props) => (
-  <div className={`notification notification__${props.status}`}>
+  <div className={clsx('notification', `notification__${props.type}`)}>
     {`(${props.name}) `}
     {props.text}
     <button
