@@ -1,14 +1,19 @@
 import React from 'react';
+import clsx from 'clsx';
 
 const RadioButton = (props) => (
   <div className='radio__container'>
+  <label className="label__container">
     <input
-      className='radio__btn'
-      disabled={props.disabled}
-      checked={props.checked}
+      className= {clsx('radio__input', { container__disabled: props.disabled })}
       type="radio"
-      name={props.name}/>
-    <label className='radio__label' htmlFor={`radio__${props.id}`}> </label>
+      checked={props.checked}
+      name={props.name}
+      disabled={props.disabled}
+      id={props.id}
+    />
+      <span className={clsx('checkmark', { checkmark__disabled: props.disabled })}></span>
+  </label>
   </div>
 );
 

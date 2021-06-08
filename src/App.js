@@ -92,6 +92,15 @@ const App = () => {
 
     <RadioButton name='radio'/>
     <RadioButton name='radio'/>
+    <RadioButton
+      name='radio'
+      disabled={true}
+    />
+    <RadioButton
+      name='radio'
+      disabled={true}
+
+    />
   </div>;
 };
 
