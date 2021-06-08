@@ -1,0 +1,45 @@
+.avatar {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar__wrap {
+  position: relative;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+}
+
+.story-violet {
+  background: url("../../../assets/img/story-violet.png") no-repeat;
+}
+
+.story-red {
+  background: url("../../../assets/img/story-red.png") no-repeat;
+}
+
+.avatar__online-marker {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    width: 12px;
+    height: 12px;
+    content: '';
+    background: #00BA88;
+    display: inline-block;
+    border-radius: 50%;
+  }
+}

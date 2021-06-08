@@ -1,0 +1,34 @@
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__item {
+  margin: 0 5px;
+  background: #EFF0F7;
+  border-radius: 4px;
+  width: 16px;
+  height: 8px;
+  transition: all .2s;
+
+  &:hover {
+    background: #D9DBE9;
+  }
+
+  &:active {
+    background: #14142B;
+  }
+
+  &-active {
+    width: 32px;
+    background: #A0A3BD;
+
+    &:hover {
+      background: #6E7191
+    }
+
+    &:active {
+      background: #14142B;
+    }
+  }
+}
