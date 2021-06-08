@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.textarea__container{
+  position: relative;
+  width: 325px;
+  height: 130px;
+  font-family: 'Poppins', sans-serif;
+  margin: 5px 0;
+  .textarea{
+    padding: 30px 10px 0 10px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 325px;
+    height: 130px;
+    background: #EFF0F7;
+    border-radius: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.75px;
+    border: none;
+
+    &__success {
+      background-color: #F2FFFB;
+      border: 2px solid #00BA88;
+    }
+
+    &__error {
+      background-color: #FFF3F8;
+      border: 2px solid #ED2E7E;
+    }
+    &:active, &:focus{
+      padding: 30px 10px 0 10px;
+      border-radius: 16px;
+      border: 2px solid #000;
+      box-sizing: border-box;
+      background: none;
+      outline: none;
+    }
+    &:disabled {
+       pointer-events: none;
+       opacity: 0.6;
+     }
+    &:disabled ~ .textarea__placeholder {
+      opacity: 0.2;
+    }
+  }
+  .textarea__placeholder{
+    position: absolute;
+    margin: 5px 0 0 15px;
+    color: #6E7191;
+    font-size: 14px;
+    opacity: 0.5;
+    &__success{
+      color: #00966D;
+      opacity: 1;
+    }
+    &__error{
+      color: #C30052;
+      opacity: 1;
+    }
+  }
+  }
+
+.textarea__message {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  margin-left: 10px;
+  font-size: 14px;
+  &-success {
+    color: #00966D;
+    margin-top: 2px;
+  }
+  &-error {
+    color: #C30052;
+    margin-top: 2px;
+  }
+  .textarea__caption {
+    color: #6E7191;
+  }
+}

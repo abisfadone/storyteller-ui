@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { Title } from './lib';
+// import { TableProps, TabsProps } from './TestData';
 import './App.scss';
 
 const App = () => (
-   <h1>hello</h1>
+  <Title>Miramixi Storyteller</Title>
 );
 
 export default App;

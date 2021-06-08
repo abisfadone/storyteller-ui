@@ -1,18 +1,18 @@
 import React from 'react';
 
 const Button = (props) => (
-  <button className={`btn btn__${props.kind}`}
-    data-id={props.id}
-    type={props.type}
-    name={props.name}
-    value={props.value}
-    disabled={props.disabled}
-    onClick={props.handleClick}
-  >
-    <span>
-      {props.label}
-    </span>
-  </button>
+  <div className={`btn__${props.size} btn__container`}>
+    <button
+      className={`btn btn__${props.type} btn__${props.size}`}
+      name={props.name}
+      disabled={props.disabled}
+      onClick={props.handleClick}
+    >
+      {props.isLoading ? <span className={`${props.type} loading`}></span> : <span>{props.value}</span>}
+    </button>
+    <div className={'btn__bcg__focus'}></div>
+  </div>
+
 );
 
 export default Button;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Tab from './Tab';
 
-const Tabs = (props) => {
+const Tabs = ({ data }) => {
   const [selectedElem, setSelectedElem] = useState(0);
 
-  if (props.children.length === 0) {
+  if (!data) {
     return <></>;
   }
 
@@ -14,13 +14,14 @@ const Tabs = (props) => {
 
   return (
     <div className="tabs">
-      {props.children.map((elem, index) => (
+      {data.map((tab, index) => (
         <Tab
-          clickHandler={clickHandler}
-          key={index}
-          {...elem.props}
+          {...tab}
+          key={tab.title}
           index={index}
-          active={selectedElem === index}/>
+          active={selectedElem === index}
+          clickHandler={clickHandler}
+        />
       ))}
     </div>
   );

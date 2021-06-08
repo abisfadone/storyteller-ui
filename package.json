@@ -1,6 +1,6 @@
 {
   "name": "storyteller-ui",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "Miramixi Storyteller UI",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -10,11 +10,7 @@
   ],
   "author": "Olfa Melles",
   "license": "MIT",
-  "keywords": [
-    "react",
-    "components",
-    "ui"
-  ],
+  "keywords": [ "react", "components", "ui" ],
   "private": false,
   "typings": "dist/index.d.ts",
   "repository": {
@@ -22,22 +18,23 @@
     "url": "git+https://github.com/abisfadone/storyteller-ui.git"
   },
   "dependencies": {
-    "@babel/cli": "^7.13.14",
-    "@babel/core": "^7.13.14",
-    "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.13.12",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "clsx": "^1.1.1",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "node-sass": "^5.0.0",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "babel-eslint": "^10.1.0",
+    "clsx": "^1.1.1",
+    "eslint": "^7.27.0",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "node-sass": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -63,15 +60,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.13.14",
-    "@babel/core": "^7.13.14",
-    "@babel/preset-env": "^7.13.12",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.27.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
   }
 }
