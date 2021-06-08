@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const TableProps = {
   keyArray: [
     { value: 'Id' },
@@ -45,4 +47,17 @@ export const TableProps = {
   ]
 };
 
-export const a = 1;
+export const TabsProps = [
+  {
+    title: 'hello',
+    content: <div>1</div>
+  },
+  {
+    title: 'hello 2',
+    content: <div>2</div>
+  },
+  {
+    title: 'hello 3',
+    content: <div>3</div>
+  }
+];
