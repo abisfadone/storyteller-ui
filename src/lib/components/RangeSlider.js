@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 
-const Slider = (props) => (
+const RangeSlider = (props) => (
   <div className={clsx('range-slider', props.disabled && 'range-slider-disabled')}>
     <input
       value={props.value}
@@ -28,4 +28,4 @@ const Slider = (props) => (
   </div>
 );
 
-export default Slider;
+export default RangeSlider;
