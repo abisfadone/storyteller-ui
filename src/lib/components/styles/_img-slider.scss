@@ -1,0 +1,51 @@
+.slider__sell {
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+
+  .slick-dots {
+    width: 15px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    height: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    button {
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        border-radius: 50%;
+        width: 7px;
+        height: 7px;
+        background: #000;
+        border: 2px solid #fff;
+      }
+    }
+
+    .slick-active {
+      button {
+        &:after {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+
+.slider__slide {
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
