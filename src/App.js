@@ -6,6 +6,7 @@ import IconButton from './lib/components/IconButton/IconButton';
 import RightArrow from './lib/components/rightArrow/rightArrow';
 import TextInput from './lib/components/TextInput/TextInput';
 import TextArea from './lib/components/TextArea/TextArea';
+import TextInputIcon from './lib/components/TextInput/TextInputIcon';
 
 import './lib/components/styles/_button.scss';
 import './lib/components/styles/_checkbox.scss';
@@ -63,10 +64,26 @@ const App = () => {
       id='Phone_number'
       name='Phone number'
       disabled={false}
+       success={true}
+       value={inputData}
+       onChangeHandler={onChangeHandler}
+       successMessage='fdsfsdfsd'
+    >
+    </TextInput>
+    <TextInput
+      size='large'
+      placeholder='Phone number'
+      type='search'
+      id='Phone_number'
+      name='Phone number'
+      disabled={false}
       error={true}
       value={inputData}
       onChangeHandler={onChangeHandler}
-    />
+      errorMessage='fdsfsdfsd'
+    >
+      <TextInputIcon />
+    </TextInput>
 
     <TextArea
       name='Enter comment'
