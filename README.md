@@ -23,9 +23,3 @@ In a React app, use the Button or Badge components:
 | disabled    | Boolean          
 | onClick     | function         
 
-
-#### Badge props
-
-| Name        | Description | 
-| ----------- | ----------- |
-| value       | integer     |
