@@ -7,6 +7,7 @@ import RightArrow from './lib/components/rightArrow/rightArrow';
 import TextInput from './lib/components/TextInput/TextInput';
 import TextArea from './lib/components/TextArea/TextArea';
 import TextInputIcon from './lib/components/TextInput/TextInputIcon';
+import IncrementStepper from './lib/components/IncrementStepper/IncrementStepper';
 
 import './lib/components/styles/_button.scss';
 import './lib/components/styles/_checkbox.scss';
@@ -15,6 +16,7 @@ import './lib/components/styles/_iconbutton.scss';
 import './lib/components/styles/_textinput.scss';
 import './lib/components/styles/_textarea.scss';
 import './lib/components/styles/_radiobutton.scss';
+import './lib/components/styles/_increment-stepper.scss';
 
 const App = () => {
   const [inputData, setInputData] = useState('');
@@ -87,8 +89,7 @@ const App = () => {
 
     <TextArea
       name='Enter comment'
-      success={true}
-    />
+     />
 
     <RadioButton name='radio'/>
     <RadioButton name='radio'/>
@@ -99,7 +100,10 @@ const App = () => {
     <RadioButton
       name='radio'
       disabled={true}
+    />
 
+    <IncrementStepper
+      increment='2'
     />
   </div>;
 };

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.stepper__container{
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-direction:row;
+  width: 100px;
+  align-items: center;
+  &__disabled{
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .stepper__btn__container{
+    position: relative;
+  }
+  .stepper__btn{
+    position: absolute;
+    margin: 5px 0 0 5px;
+    width: 32px;
+    height: 32px;
+    background-color: #EFF0F6;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 400;
+    &:hover{
+      border: 2px solid #D9DBE9;
+      cursor: pointer;
+    }
+    &:hover ~ .stepper__bcg__focus {
+      background-color: #E8E1FD;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      z-index: -1;
+    }
+    &:active, &:focus{
+      color: #5F2EEA;
+      border: 2px solid #5F2EEA;
+      cursor: pointer;
+    }
+
+  }
+  .stepper__increment {
+    position: absolute;
+    margin: 40px 0 0 65px;
+    &:hover{
+      color:#2A00A2;
+      cursor: default;
+  };
+  }
+
+.stepper__bcg__focus{
+  position: absolute;
+}
+
+}
+
+
