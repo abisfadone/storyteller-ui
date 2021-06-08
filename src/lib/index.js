@@ -9,8 +9,8 @@ import Modal from './components/Modal';
 import Status from './components/Status';
 import Tag from './components/Tag';
 import Stats from './components/Stats';
-import Tabs from './components/tab/Tabs';
-import Tab from './components/tab/Tab';
+import Tabs from './components/Tabs';
+import Tab from './components/Tab';
 import Pagination from './components/Pagination';
 import AvatarWithName from './components/AvatarWithName';
 import Avatar from './components/Avatar';
@@ -23,8 +23,18 @@ import Title from './components/Title';
 import Text from './components/Text';
 import Toggle from './components/Toggle';
 import Slider from './components/Slider';
+import Checkbox from './components/Checkbox';
+import IconButton from './components/IconButton';
+import RightArrow from './components/RightArrow';
+import TextInput from './components/TextInput';
+import TextArea from './components/TextArea';
+import TextInputIcon from './components/TextInputIcon';
+import IncrementStepper from './components/IncrementStepper';
+import RadioButton from './components/RadioButton';
+import AppBar from './components/AppBar';
 
 export {
+  AppBar,
   Badge,
   Button,
   Comment,
@@ -49,5 +59,13 @@ export {
   Title,
   Text,
   Toggle,
-  Slider
+  Slider,
+  Checkbox,
+  IconButton,
+  RightArrow,
+  TextInput,
+  TextArea,
+  TextInputIcon,
+  IncrementStepper,
+  RadioButton
 };

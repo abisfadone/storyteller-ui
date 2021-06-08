@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 
-import './App.scss';
 import {
-  Text, Title, Comment, Table, ProgressInteraction, ProgressInteractionRadius, Toast, Tooltips, Status,
+  AppBar,
+  Text,
+  Title,
+  Comment,
+  Table,
+  ProgressInteraction,
+  ProgressInteractionRadius,
+  Toast,
+  Tooltips,
+  Status,
   Tag,
   Stats,
   Tabs,
@@ -15,75 +23,30 @@ import {
   Color,
   Grayscale,
   Toggle,
-  Slider
+  Slider,
+  Button,
+  Checkbox,
+  IconButton,
+  RightArrow,
+  TextInput,
+  TextArea,
+  TextInputIcon,
+  IncrementStepper,
+  RadioButton
 } from './lib';
-import Button from './lib/components/Button/Button';
-import Checkbox from './lib/components/Checkbox/Checkbox';
-import RadioButton from './lib/components/RadioButton/RadioButton';
-import IconButton from './lib/components/IconButton/IconButton';
-import RightArrow from './lib/components/rightArrow/rightArrow';
-import TextInput from './lib/components/TextInput/TextInput';
-import TextArea from './lib/components/TextArea/TextArea';
-import TextInputIcon from './lib/components/TextInput/TextInputIcon';
-import IncrementStepper from './lib/components/IncrementStepper/IncrementStepper';
 
+import './App.scss';
+import { TableProps } from './TestData';
 import avatar from './assets/img/avatar.png';
-
-const TableProps = {
-  keyArray: [
-    { value: 'Id' },
-    {
-      value: 'Name',
-      type: 'disabled'
-    },
-    {
-      value: 'LastName',
-      type: 'error'
-    },
-    {
-      value: 'Age',
-      type: 'selected'
-    }
-  ],
-  tableDateArray: [
-    [
-      { value: '32' },
-      {
-        value: 'Illia',
-        type: 'error'
-      },
-      { value: 'Pruskii' },
-      { value: '18' }
-    ],
-    [
-      { value: '32' },
-      { value: 'Illia' },
-      {
-        value: 'Pruskii',
-        type: 'error'
-      },
-      { value: '18' }
-    ],
-    [
-      { value: '32' },
-      { value: 'Illia' },
-      { value: 'Pruskii' },
-      {
-        value: '18',
-        type: 'selected'
-      }
-    ]
-  ]
-};
 
 const App = () => {
   const [value, setValue] = useState(0);
+  const [inputData, setInputData] = useState('');
 
   const changeHandler = (e) => {
     setValue(e.target.value);
   };
 
-  const [inputData, setInputData] = useState('');
   const onChangeHandler = (event) => {
     const { value } = event.target;
 
@@ -93,6 +56,86 @@ const App = () => {
 
   return (
     <div>
+      <p>Miramixi Storyteller</p>
+
+      <AppBar />
+
+      <h5>A button:</h5>
+      <Button
+        type='secondary'
+        size='small'
+        value='Button'
+        isLoading={false}
+      />
+      <Button
+        type='subtle'
+        size='large'
+        value='Button'
+        isLoading={true}
+        disabled={false}
+      />
+      <Checkbox
+        id='checkbox'
+      />
+      <IconButton
+        type='primary'
+        isLoading={false}
+      >
+        <RightArrow color='primary'/>
+      </IconButton>
+
+      <IconButton
+        type='secondary'
+      >
+        <RightArrow color='secondary'/>
+      </IconButton>
+
+      <TextInput
+        size='large'
+        placeholder='Phone number'
+        type='search'
+        id='Phone_number'
+        name='Phone number'
+        disabled={false}
+        success={true}
+        value={inputData}
+        onChangeHandler={onChangeHandler}
+        successMessage='fdsfsdfsd'
+      >
+      </TextInput>
+      <TextInput
+        size='large'
+        placeholder='Phone number'
+        type='search'
+        id='Phone_number'
+        name='Phone number'
+        disabled={false}
+        error={true}
+        value={inputData}
+        onChangeHandler={onChangeHandler}
+        errorMessage='fdsfsdfsd'
+      >
+        <TextInputIcon />
+      </TextInput>
+
+      <TextArea
+        name='Enter comment'
+      />
+
+      <RadioButton name='radio'/>
+      <RadioButton name='radio'/>
+      <RadioButton
+        name='radio'
+        disabled={true}
+      />
+      <RadioButton
+        name='radio'
+        disabled={true}
+      />
+
+      <IncrementStepper
+        increment='2'
+      />
 
       <Slider
         type="range"
