@@ -10,7 +10,6 @@ const Checkbox = (props) => (
         id={`checkbox__${props.id}`}/>
       <label htmlFor={`checkbox__${props.id}`}>{props.label}</label>
     </div>
-    <div className='checkbox__focus'></div>
   </div>
 );
 

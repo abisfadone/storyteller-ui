@@ -12,7 +12,7 @@ const RadioButton = (props) => (
       disabled={props.disabled}
       id={props.id}
     />
-      <span className={clsx('checkmark', { checkmark__disabled: props.disabled })}></span>
+      <span className={clsx('checkmark', { checkmark__disabled: props.disabled })} />
   </label>
   </div>
 );

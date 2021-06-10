@@ -1,12 +1,11 @@
 import React from 'react';
 import { default as Select } from 'react-select';
-
 import customStyles from './styles/dropDownCustomStyles';
 
 const DropDown = (props) => (
-  <div className="dropdown__container">
+  <div>
     <Select options={props.options}
-            defaultValue={{ label: props.value, value: props.value }}
+            defaultValue={{ label: props.defaultValue, value: props.defaultValue }}
             styles={customStyles}
             classNamePrefix="myDropDown"
             onChange={props.changeHandler}

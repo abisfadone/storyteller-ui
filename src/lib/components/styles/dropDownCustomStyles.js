@@ -14,7 +14,8 @@ const customStyles = {
       border: '2px solid black'
     },
     '&:hover': {
-      border: '2px solid #5F2EEA'
+      border: `2px solid ${state.selectProps.menuColor}`,
+      boxShadow: 'rgba(228, 219, 253, 0.8) 0px 0px 0px 5px'
     }
   }),
   option: (provided, state) => ({
