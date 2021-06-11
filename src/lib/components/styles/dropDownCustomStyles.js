@@ -7,6 +7,7 @@ const customStyles = {
     borderRadius: '16px',
     width: '325px',
     height: '64px',
+    margin: '3px',
     boxSizing: 'border-box',
     zIndex: 2,
     opacity: state.isDisabled ? 0.5 : 1,
@@ -59,7 +60,7 @@ const customStyles = {
     marginTop: '-15px',
     paddingTop: '10px',
     width: '323px',
-    marginLeft: '1px'
+    marginLeft: '4px'
 
   })
 };

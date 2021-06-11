@@ -3,7 +3,7 @@ import { default as Select } from 'react-select';
 import customStyles from './styles/dropDownCustomStyles';
 
 const DropDown = (props) => (
-  <div>
+
     <Select options={props.options}
             defaultValue={{ label: props.defaultValue, value: props.defaultValue }}
             styles={customStyles}
@@ -11,8 +11,8 @@ const DropDown = (props) => (
             onChange={props.changeHandler}
             isDisabled={props.disabled}
             menuColor={props.menuColor}
+            blurInputOnSelect={true}
     />
-  </div>
 );
 
 export default DropDown;
