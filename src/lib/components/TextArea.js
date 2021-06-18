@@ -13,7 +13,7 @@ const TextArea = (props) => (
       disabled={props.disabled}
       value={props.value}
       onChange={props.handleChange}
-      ></textarea>
+      />
       <p className={ clsx('textarea__placeholder',
         { textarea__placeholder__success: props.success },
         { textarea__placeholder__error: props.error }) }>{props.name}</p>

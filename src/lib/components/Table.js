@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import pen from '../../assets/icon/pen.svg';
-import trash from '../../assets/icon/trash.svg';
+import pen from '../../assets/icon/pen-secondary.svg';
+import trash from '../../assets/icon/trash-secondary.svg';
 
 const Table = (props) => {
   if (!props.tableDateArray[0]) return <h1>Table is empty!</h1>;

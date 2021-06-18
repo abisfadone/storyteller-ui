@@ -8,6 +8,7 @@
   flex-direction:row;
   width: 100px;
   align-items: center;
+  margin: 3px;
   &__disabled{
     opacity: 0.5;
     pointer-events: none;
@@ -16,8 +17,6 @@
     position: relative;
   }
   .stepper__btn{
-    position: absolute;
-    margin: 5px 0 0 5px;
     width: 32px;
     height: 32px;
     background-color: #EFF0F6;
@@ -42,20 +41,20 @@
       border: 2px solid #5F2EEA;
       cursor: pointer;
     }
+    &:focus{
+      box-shadow: rgba(228, 219, 253, 0.7) 0 0 0 5px;
+    }
+
 
   }
   .stepper__increment {
-    position: absolute;
-    margin: 40px 0 0 65px;
     &:hover{
       color:#2A00A2;
       cursor: default;
   };
   }
 
-.stepper__bcg__focus{
-  position: absolute;
-}
+
 
 }
 

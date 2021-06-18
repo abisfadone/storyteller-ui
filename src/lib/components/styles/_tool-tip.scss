@@ -1,0 +1,23 @@
+.tooltip__container, .tooltip__arrow {
+  position: relative;
+  align-items: center;
+  padding: 16px 24px;
+  background: #EFF0F7;
+  border-radius: 16px;
+  font-size: 16px;
+  letter-spacing: 0.75px;
+  margin-top: 17px;
+  line-height: 28px;
+  display: inline-block;
+}
+
+.tooltip__arrow:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  background: #EFF0F7;
+  width: 28px;
+  height: 17px;
+  clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
+  top: -17px;
+}

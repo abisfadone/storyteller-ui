@@ -45,6 +45,10 @@
       background-color: #2A00A2;
     }
 
+    &:focus {
+      box-shadow: rgba(228, 219, 253, 0.7) 0 0 0 5px;
+    }
+
     &__disabled {
       opacity: 0.5;
       pointer-events: none;
